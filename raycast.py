@@ -2,9 +2,9 @@ from tkinter import *
 import math, time, random
 
 # W,H = 1440,900
-W,H = 400,400;
+W,H = 800,800;
 walls = [];
-viewingDistance = 100;
+viewingDistance = 800;
 
 def dist(p1,p2):
     return math.sqrt((p1[1]-p2[1])**2 + (p1[0]-p2[0])**2);
@@ -58,7 +58,7 @@ class Viewer():
         root.bind("<Motion>",self.updatePos);
 
     def generateRange(self):
-        upperLimit = 450;
+        upperLimit = 550;
         for i in range(0,upperLimit,1):
             newVal = mapVal(i,0,upperLimit,0,360);
             if newVal % 90 != 0:
@@ -170,9 +170,9 @@ screen = Canvas(root,width=W,height=H,bd=0,highlightthickness=0,bg='#000');
 screen.pack();
 
 margin = 50;
-for i in range(1):
+for i in range(7):
     pos = (random.randint(margin,W-margin),random.randint(margin,H-margin))
-    Box(pos,random.randint(50,150),random.randint(0,360),'#f00');
+    Box(pos,random.randint(50,150),random.randint(0,360),'#000');
 
 o = Viewer((250,250),viewingDistance);
 
