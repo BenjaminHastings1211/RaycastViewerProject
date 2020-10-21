@@ -5,7 +5,7 @@ import math, time, random
 W,H = 400,400
 walls = []
 viewingDistance = 100
-
+#hello
 def dist(p1,p2):
     return math.sqrt((p1[1]-p2[1])**2 + (p1[0]-p2[0])**2)
 
